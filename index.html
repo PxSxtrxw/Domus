@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domus</title>
+    <link rel="icon" href="resources/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="resources/logo.png" alt="Logo" class="logo">
+        </div>
+        <nav>
+            <a href="index.html">Menu</a>
+            <a href="desarrolladores.html">Desarrolladores</a>
+        </nav>
+    </header>
+
+    <div class="bienvenida">
+        <div class="bienvenida-texto">
+            <h1>DOMUS</h1>
+            <p>Automatizando tu hogar</p>
+        </div>
+    </div>
+
+    <main>
+        <section class="cuerpo">
+            <button class="cuadro" data-target="#respuesta-que-es">¿Qué es?</button>
+            <button class="cuadro" data-target="#respuesta-como-funciona">¿Cómo funciona?</button>
+            <button class="cuadro" data-target="#respuesta-como-fue-disenado">¿Cómo fue diseñado?</button>
+        </section>
+
+        <section class="descargas">
+
+            <div class="descarga-item">
+                <a href="ejem.apk" class="descarga-boton" target="_blank" download="nombre_de_archivo.apk">
+                    <i class="fab fa-android descarga-icono"></i>
+                    Descargar App
+                </a>
+                <p>Descarga nuestra app móvil para controlar la automatización de luces de tu hogar de manera sencilla y
+                    eficiente.</p>
+            </div>
+
+            <div class="descarga-item">
+                <a href="https://github.com/ivanf12300/Domus-arduino-code" class="descarga-boton" target="_blank">
+                    <i class="fab fa-github descarga-icono"></i>
+                    Ver Código en GitHub
+                </a>
+                <p>Accede al repositorio de GitHub para ver el código fuente del Arduino y entender cómo funciona
+                    nuestra solución de automatización.</p>
+            </div>
+        </section>
+
+        <section class="respuestas">
+            <div id="respuesta-que-es" class="respuesta">
+                <img src="resources/img1.png" alt="¿Qué es?" class="respuesta-img">
+                <div class="respuesta-texto">
+                    <h2>¿Qué es?</h2>
+                    <p>El proyecto Domus, desarrollado por estudiantes del Colegio Técnico Nacional de Encarnación, Paraguay, tiene como objetivo principal automatizar el control de la iluminación del laboratorio de informática. El problema principal era que las luces del laboratorio permanecían encendidas constantemente, generando un desperdicio de energía, Es un proyecto innovador que demuestra cómo la tecnología puede ser utilizada para mejorar la eficiencia y la comodidad en entornos educativos. Este proyecto es un excelente ejemplo de cómo la educación técnica puede fomentar la creatividad y la resolución de problemas en los estudiantes.</p>
+                </div>
+            </div>
+            <div id="respuesta-como-funciona" class="respuesta">
+                <img src="resources/img2.png" alt="¿Cómo funciona?" class="respuesta-img">
+                <div class="respuesta-texto">
+                    <h2>¿Cómo funciona?</h2>
+                    <p>Domus es un sistema automatizado diseñado para controlar la iluminación del laboratorio de informática del Colegio Técnico Nacional de Encarnación. En esencia, permite encender y apagar las luces de manera remota y automática a través de una aplicación móvil, Funciona como un intermediario entre el usuario y el sistema de iluminación del laboratorio. Al utilizar tecnología Bluetooth y una aplicación móvil, permite un control remoto y automatizado de las luces, lo que se traduce en un mayor ahorro de energía y comodidad para los usuarios.</p>
+                </div>
+            </div>
+            <div id="respuesta-como-fue-disenado" class="respuesta">
+                <img src="resources/img3.png" alt="¿Cómo fue diseñado?" class="respuesta-img">
+                <div class="respuesta-texto">
+                    <h2>¿Cómo fue diseñado?</h2>
+                    <p>Domus se enfocó en crear un sistema sencillo, eficiente y confiable para controlar la iluminación del laboratorio. Se combinaron conocimientos de electricidad, electrónica y programación para desarrollar una solución práctica que satisface las necesidades del proyecto. La elección de componentes adecuados, la programación cuidadosa de la aplicación y las pruebas exhaustivas fueron fundamentales para el éxito del proyecto.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <span>Do</span>mus
+            </div>
+            <ul class="footer-contact">
+                <li><a href="mailto:contacto@compania.com">domus024@gmail.com</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

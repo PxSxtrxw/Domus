@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #fff;
+}
+
+/* Header */
+header {
+    background-color: #3f3f3f;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 15px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #64b4b0;
+    color: #ffffff;
+}
+
+/* Logo */
+.logo-container {
+    margin-left: 10px;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+}
+
+/* CUERPO */
+.cuerpo {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    background-color: #a7a7a7;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container {
+    display: flex;
+}
+
+.image-container {
+    position: relative;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+.imagen {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 175px;
+    height: 175px;
+    display: block;
+    opacity: 0;
+    z-index: 3;
+    border-radius: 50%;
+    transition: opacity 0.3s ease, margin-left 0.5s ease;
+}
+
+.image-container:hover .hover-image {
+    opacity: 1;
+    margin-left: 260px;
+}
+
+.image-container:hover .imagen {
+    opacity: 0;
+}
+
+.info-container {
+    position: absolute;
+    top: 50%;
+    left: calc(20% + 100px);
+    transform: translate(-39%, -51%);
+    background-color: #ffffff;
+    width: 370px;
+    height: 174px;
+    opacity: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 2;
+    transition: opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-container h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.info-container .job-title {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #666;
+}
+
+.info-container .email {
+    margin: 0;
+    font-size: 13px;
+    color: #999;
+    margin-top: 29.2%;
+}
+
+.image-container:hover .info-container {
+    opacity: 1;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+footer {
+    background-color: #3f3f3f;
+    color: #ecf0f1;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer-logo span {
+    color: #64b4b0;
+}
+
+.footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact li {
+    margin-bottom: 10px;
+}
+
+.footer-contact a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-contact a:hover {
+    color: #64b4b0;
+}
+
+/* TÍTULO */
+.titulo {
+    margin-top: 130px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 1em;
+    color: #000000;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.titulo::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 2px;
+    background-color: #333;
+    transition: width 0.3s ease;
+}
+
+.titulo:hover {
+    color: #0b76a6;
+}
+
+.titulo:hover::before {
+    width: 100%;
+}
+
+/* Ajustes generales para dispositivos pequeños (tabletas y móviles pequeños) */
+@media only screen and (max-width: 768px) {
+
+    /* Cambia el layout de los enlaces de navegación a columna para mejor adaptación en pantallas pequeñas */
+    nav {
+        margin-top: 10px;
+    }
+
+    /* Ajusta el margen de los enlaces en la navegación para una mejor visualización en dispositivos móviles */
+    nav a {
+        margin: 5px 0;
+    }
+
+    /* Reduce el tamaño del logo para que se ajuste mejor en pantallas más pequeñas */
+    .logo {
+        width: 40px;
+        height: auto;
+    }
+
+    /* Ajusta el layout de las secciones del cuerpo para que se alineen y se centren en pantallas pequeñas */
+    .cuerpo {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    /* Cambia el layout de los contenedores para que se alineen en columna y se centren */
+    .container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Ajusta el margen de los contenedores de imágenes y el texto dentro de ellos */
+    .image-container {
+        margin-right: 0;
+        /* Elimina el margen derecho */
+        margin-bottom: 20px;
+        /* Mantiene el margen inferior */
+        width: 100%;
+        /* Hace que el contenedor use todo el ancho disponible */
+        text-align: center;
+        /* Centra el contenido del contenedor */
+    }
+
+    /* Ajusta el tamaño de las imágenes para pantallas más pequeñas */
+    .imagen,
+    .hover-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Ajusta la posición y tamaño de la caja de información para pantallas pequeñas */
+    .info-container {
+        width: 100%;
+        /* Usa todo el ancho disponible */
+        max-width: 300px;
+        /* Limita el ancho máximo */
+        height: 150px;
+        left: 24%;
+        /* Centra horizontalmente */
+        transform: translateX(-50%);
+        /* Ajusta la posición para centrar */
+        top: 0%;
+        /* Coloca la caja debajo de la imagen */
+    }
+
+    .info-container .email {
+        margin: 0;
+        font-size: 13px;
+        color: #999;
+        margin-top: 20%;
+    }
+}
+
+/* Ajustes para dispositivos muy pequeños (teléfonos en orientación vertical) */
+@media only screen and (max-width: 480px) {
+
+    /* Reduce aún más el tamaño del logo para pantallas muy pequeñas */
+    .logo {
+        width: 30px;
+        height: auto;
+    }
+
+    /* Ajusta el tamaño de las imágenes para pantallas muy pequeñas */
+    .imagen,
+    .hover-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Ajusta la posición y tamaño de la caja de información para pantallas muy pequeñas */
+    .info-container {
+        width: 90%;
+        /* Usa el 90% del ancho disponible */
+        max-width: 300px;
+        /* Limita el ancho máximo */
+        height: 120px;
+        left: 4%;
+        /* Ajusta la posición horizontalmente */
+        transform: translateX(0);
+        /* Elimina el ajuste de centramiento */
+        top: 0%;
+        /* Mantiene la posición debajo de la imagen */
+    }
+
+    .info-container .email {
+        margin: 0;
+        font-size: 13px;
+        color: #999;
+        margin-top: 15%;
+    }
+
+    /* Ajusta el tamaño de la fuente del título para pantallas muy pequeñas */
+    .titulo {
+        font-size: 0.9em;
+    }
+}
